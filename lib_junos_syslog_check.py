@@ -1,15 +1,8 @@
-import paramiko
+import argparse, datetime, os, paramiko, re, sys, time
 from lib_ssh_connectivity import Device
 from lib_ssh_connectivity import create_handle_quiet
-import os
-import re
-import sys
-import time
-import datetime
 from pprint import pprint
-import argparse
 from collections import defaultdict
-
 
 
 
@@ -221,4 +214,4 @@ def parse_system_messages(inputs):
         print(f'The first {log_display_count} jtask rpd toggletrace log messages are displayed below.')
         for l in log_jtask_rpdtogtrace[:10]:
             print(l)
-    #return []
+
